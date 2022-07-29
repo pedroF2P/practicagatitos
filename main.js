@@ -3,10 +3,10 @@ var imagen = document.querySelector("img");
 var boton = document.querySelector("button");
 
 function peticionGatito() {
-    // GET
+   
     fetch(URL)
         .then(function (response) {
-            // Esta funcion se ejecuta si salio bien la peticion
+            
             return response.json();
         })
         .then(function (data) {
@@ -14,7 +14,7 @@ function peticionGatito() {
             imagen.src = data[0].url 
         })
         .catch(function (error) {
-            // Esta funcion se ejecuta cuando algun error
+           
             console.log(error);
         });    
 }
